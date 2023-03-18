@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Actualizar tarea</title>
+</head>
+<body>
+  <h1>Actualizar tarea</h1>
+  <form method="post">
+    {% csrf_token %}
+    <p>
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" value="{{ task.nombre }}">
+    </p>
+    <p>
+      <label for="descripcion">Descripción:</label>
+      <input type="text" name="descripcion" value="{{ task.descripcion }}">
+    </p>
+    <p>
+      <label for="precio">Precio:</label>
+      <input type="number" name="precio" value="{{ task.precio }}">
+    </p>
+    <p>
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" name="cantidad" value="{{ task.cantidad }}">
+    </p>
+    <p>
+      <label for="categoria">Categoría:</label>
+      <input type="text" name="categoria" value="{{ task.categoria }}">
+    </p>
+    <button type="submit">Actualizar</button>
+  </form>
+</body>
+</html>
+
+
+
